@@ -63,9 +63,9 @@ O projeto está organizado da seguinte forma:
 👤 Autor
 Feito por Guilherme.
 
-GitHub: @seu-usuario
+GitHub: @gui-dev7
 
-LinkedIn: Seu LinkedIn
+LinkedIn: [guimeol](https://www.linkedin.com/in/guimeol/)
 
 📝 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
