@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Spotify</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="spotify-container">
+        
+        <aside class="sidebar">
+            <div class="logo"> <a href="#"><i class="fa-brands fa-spotify" style="color: #ffffff;"></i></a> </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-target="home-content" title="Início"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#" class="nav-link" data-target="search-content" title="Buscar"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#" class="nav-link" data-target="library-content" title="Sua Biblioteca"><i class="fa-solid fa-layer-group"></i></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="home-content" class="content-view active">
+                <h2>Boa noite</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="images/QVVJFA.png" alt="Capa do Álbum">
+                        <h4>QVVJFA?</h4>
+                        <p>Baco Exu do Blues</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/1200x630bb.jpg" alt="Capa do Álbum">
+                        <h4>Cangaço Sessions</h4>
+                        <p>DUPÊ • Guiga Serra • Bagua Records</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Captura de tela 2025-09-05 114030.png" alt="Capa do Álbum">
+                        <h4>7guime</h4>
+                        <p>Quer chapar?.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/fogo.png" alt="Capa do Álbum">
+                        <h4>Young Piva, Baco Exu do Blues</h4>
+                        <p>Álbum.</p>
+                    </div>
+
+            </div>
+
+            <div id="search-content" class="content-view">
+                <h2>Buscar</h2>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="O que você quer ouvir?">
+                </div>
+            </div>
+
+            <div id="library-content" class="content-view">
+                <h2>Sua Biblioteca</h2>
+                <p>Aqui aparecerão suas músicas, álbuns e artistas salvos.</p>
+            </div>
+
+        </main>
+
+        <footer class="player-bar">
+            
+            <div class="now-playing">
+                <img src="images/playerbar.jpg" alt="Capa do Álbum" class="album-art">
+                <div class="song-info">
+                    <p class="song-title">Samba in Paris</p>
+                    <p class="song-artist">Baco Exu do Blues, Gloria Groove</p>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <a href="#" class="control-icon" title="Aleatório"><i class="fa-solid fa-shuffle"></i></a>
+                    <a href="#" class="control-icon" title="Anterior"><i class="fa-solid fa-backward-step"></i></a>
+                    <a href="#" class="control-icon play-button" title="Play"><i class="fa-solid fa-circle-play"></i></a>
+                    <a href="#" class="control-icon" title="Próxima"><i class="fa-solid fa-forward-step"></i></a>
+                    <a href="#" class="control-icon" title="Repetir"><i class="fa-solid fa-repeat"></i></a>
+                </div>
+                <div class="progress-bar-section">
+                    <span class="time-stamp">0:58</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-level"></div>
+                    </div>
+                    <span class="time-stamp">3:14</span>
+                </div>
+            </div>
+
+            <div class="player-settings">
+                <a href="#" class="control-icon" title="Volume"><i class="fa-solid fa-volume-high"></i></a>
+                <div class="volume-bar-container">
+                    <div class="volume-level"></div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,241 @@
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+}
+.spotify-container {
+    display: grid;
+    grid-template-areas:
+        "sidebar main-content"
+        "player-bar player-bar";
+    grid-template-columns: 80px 1fr; 
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+}
+.main-content {
+    grid-area: main-content;
+    background: linear-gradient(to bottom, #222222, #121212);
+    overflow-y: auto;
+    padding: 24px;
+}
+
+/* --- BARRA DE NAVEGAÇÃO --- */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #000000;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar .logo { font-size: 28px; margin-bottom: 24px; }
+.sidebar .nav-menu { list-style-type: none; padding: 0; width: 100%; }
+.sidebar .nav-menu li { padding: 16px 0; text-align: center; }
+.sidebar .nav-menu a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+.sidebar .nav-menu a:hover { color: #ffffff; }
+.sidebar .nav-menu a.active { color: #ffffff; }
+
+/* --- CONTEÚDO DINÂMICO --- */
+.content-view { display: none; }
+.content-view.active { display: block; }
+h2 { font-size: 24px; margin-bottom: 20px; }
+
+/* --- ESTILOS DOS CARDS --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+}
+.card {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.card:hover { background-color: #282828; }
+.card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.card h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* --- ESTILOS DA BUSCA --- */
+.search-bar {
+    position: relative;
+    max-width: 360px;
+}
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #121212;
+}
+.search-bar input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #121212;
+}
+.search-bar input::placeholder {
+    color: #121212;
+    font-weight: 500;
+}
+
+/* --- ESTILOS DA PLAYER BAR --- */
+.player-bar {
+    grid-area: player-bar;
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.now-playing .album-art {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+}
+
+.now-playing .song-info .song-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.now-playing .song-info .song-artist {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin: 4px 0 0 0;
+}
+
+.player-controls {
+    flex: 2; /* Dando mais espaço para a seção central */
+    display: flex;
+    flex-direction: column; /* Para empilhar botões e barra */
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espaço entre os botões e a barra de progresso */
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-icon {
+    color: #b3b3b3;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.control-icon:hover {
+    color: #ffffff;
+}
+
+.control-buttons .play-button {
+    font-size: 36px;
+    color: #ffffff;
+    transition: transform 0.1s;
+}
+.control-buttons .play-button:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.progress-bar-section .time-stamp {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress-level {
+    width: 30%; /* Progresso inicial da música */
+    height: 100%;
+    background-color: #b3b3b3;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.progress-bar-container:hover .progress-level {
+    background-color: #1db954; /* Verde do Spotify */
+}
+
+
+.player-settings {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.volume-bar-container {
+    width: 100px;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.volume-level {
+    width: 80%; /* Nível de volume inicial */
+    height: 100%;
+    background-color: #b3b3b3;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.volume-bar-container:hover .volume-level {
+    background-color: #1db954; /* Verde do Spotify */
+}
